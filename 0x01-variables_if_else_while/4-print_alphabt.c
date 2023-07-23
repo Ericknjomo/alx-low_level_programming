@@ -1,18 +1,19 @@
 #include <stdio.h>
-
 /**
- * main - Prints the alphabets.
- *
- * Return: Always 0 (Success)
+ * main - prints the stdout
+ * Return: 0 if all goes well
  */
 int main(void)
 {
-char alp[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-int i;
+char lowerCase, not, nott;
 
-for (i = 0; i < 52; i++)
+not = 'e';
+nott = 'q';
+
+for (lowerCase = 'a'; lowerCase <= 'z'; lowerCase++)
 {
-putchar(alp[i]);
+if (lowerCase != not && lowerCase != nott)
+putchar(lowerCase);
 }
 putchar('\n');
 return (0);
