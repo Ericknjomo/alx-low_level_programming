@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 
+
+/**
+ * more_numbers - function to print numbers
+ *
+ * Return: Always 0.
+ */
 void more_numbers(void)
 {
 	int a, b;
