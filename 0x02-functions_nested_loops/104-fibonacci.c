@@ -1,43 +1,45 @@
-i#include <stdio.h>
+#include <stdio.h>
 
 /**
- * main - finds and prints the first 98 Fibonacci numbers,
- * starting with 1 and 2
- * followed by a new line
- * Return: ALways 0 (Success)
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-	unsigned long int i, j, k, j1, j2, k1, k2;
+	unsigned long int a = 0, b = 1, c;
+	unsigned long int d, e, f, g;
+	int h = 0;
 
-	j = 1;
-	k = 2;
-
-	printf("%lu", j);
-
-	for (i = 1; i < 91; i++)
+	for (h = 0; h <= 91; h++)
 	{
-		printf(", %lu", k);
-		k = k + j;
-		j = k - j;
+		c = a + b;
+		a = b;
+		b = c;
+		printf("%lu, ", c);
 	}
-
-	j1 = j / 1000000000;
-	j2 = j % 1000000000;
-	k1 = k / 1000000000;
-	k2 = k % 1000000000;
-
-	for (i = 92; i < 99; ++i)
+	d = a % 1000;
+	a = a / 1000;
+	e = b % 1000;
+	b = b / 1000;
+	while (h <= 98)
 	{
-		printf(", %lu", k1 + (k2 / 1000000000));
-		printf("%lu", k2 % 1000000000);
-		k1 = k1 + j1;
-		j1 = k1 - j1;
-		k2 = k2 + j2;
-		j2 = k2 - j2;
-	}
-
+		g = (d + e) / 1000;
+		f = (d + e) - g * 1000;
+		c = (a + b) + g;
+		d = e;
+		e = f;
+		a = b;
+		b = c;
+		if (f >= 100)
+			printf("%lu%lu", c, f);
+		else
+			printf("%lu0%lu", c, f);
+		if (h != 98)
+			printf(" , ");
+		h++;
+		}
 	printf("\n");
-
 	return (0);
 }
+
